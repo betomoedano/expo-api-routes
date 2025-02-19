@@ -337,7 +337,7 @@ export function Section({
     ) {
       child = React.cloneElement(child, {
         dynamicTypeRamp: "body",
-        numberOfLines: 1,
+        // numberOfLines: 1,
         adjustsFontSizeToFit: true,
         ...resolvedProps,
         onPress: undefined,
@@ -481,7 +481,7 @@ export function Section({
           resolvedProps.style,
         ],
         dynamicTypeRamp: "body",
-        numberOfLines: 1,
+        // numberOfLines: 1,
         adjustsFontSizeToFit: true,
         asChild: process.env.EXPO_OS !== "web",
         children: (

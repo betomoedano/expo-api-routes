@@ -65,7 +65,12 @@ export default function Layout({ segment }: { segment: string }) {
       <Stack.Screen
         name="account"
         options={{
-          presentation: "modal",
+          headerTitle: "AI Tools",
+          headerLargeTitle: false,
+          presentation: "formSheet",
+          sheetAllowedDetents: [0.5, 0.6],
+          sheetGrabberVisible: true,
+          // sheetLargestUndimmedDetentIndex: 1,
 
           headerRight: () => (
             <Form.Link headerRight bold href="/" dismissTo>

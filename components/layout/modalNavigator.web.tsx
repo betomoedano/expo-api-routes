@@ -186,7 +186,7 @@ function MyModalStackView({
                 >
                   <div className={modalStyles.modal}>
                     {/* Optional "grabber" */}
-                    {sheetGrabberVisible && (
+                    {/* {sheetGrabberVisible && (
                       <div
                         style={{
                           padding: 16,
@@ -207,7 +207,7 @@ function MyModalStackView({
                           }}
                         />
                       </div>
-                    )}
+                    )} */}
 
                     {/* Render the actual screen */}
                     {descriptor.render()}
