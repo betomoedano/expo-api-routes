@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import * as Form from "@/components/ui/Form";
 import { IconSymbol } from "@/components/ui/IconSymbol";
@@ -14,6 +14,7 @@ import {
 import { useColorScheme } from "react-native";
 export default function Page() {
   const colorScheme = useColorScheme();
+  const [content, setContent] = useState("");
   return (
     <View style={{ flex: 1 }}>
       <Form.List navigationTitle="Home">
@@ -23,10 +24,14 @@ export default function Page() {
         >
           <Form.HStack style={{ gap: 16 }}>
             <TextInput
+              value={content}
+              multiline={true}
+              onChangeText={setContent}
               placeholder="What's on your mind?"
               placeholderTextColor={AC.systemGray}
               style={{
                 flexGrow: 1,
+                maxWidth: "80%",
                 borderWidth: 1,
                 borderColor: AC.separator,
                 borderRadius: 8,
@@ -34,7 +39,13 @@ export default function Page() {
                 color: colorScheme === "dark" ? "white" : "black",
               }}
             />
-            <Form.Link href="/account">
+            <Form.Link
+              disabled={content.length === 0}
+              href={{
+                pathname: "/account",
+                params: { content },
+              }}
+            >
               <IconSymbol
                 color={AC.systemOrange}
                 name={Platform.OS !== "ios" ? "sparkle" : "sparkles"}
