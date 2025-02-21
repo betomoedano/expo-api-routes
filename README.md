@@ -10,4 +10,6 @@ This example demonstrates how to use API routes with Expo Router. The app is bui
 
 ## Getting Started
 
-Create a new project using the template:
+Watch the step-by-step video tutorial to learn how to build this app:
+
+[![Tutorial Video](https://img.youtube.com/vi/2_UzR1wdimI/0.jpg)](https://youtu.be/2_UzR1wdimI)
